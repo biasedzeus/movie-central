@@ -27,7 +27,7 @@ const SearchBar = () => {
 
   return (
     <Stack
-      maxWidth={{ lg: "100%", xl: "900px" }}
+      maxWidth={{ xs: "100%", xl: "100%" }}
       alignItems="center"
       sx={{
         backgroundColor: "#303030",
