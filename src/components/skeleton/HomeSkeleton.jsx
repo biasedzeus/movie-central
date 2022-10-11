@@ -6,7 +6,7 @@ const HomeSkeleton = () => {
     <Stack alignItems="center" height={"100vh"}>
         <Skeleton width="70%" height="100px"/>
         <Skeleton width="70%" height="200px"/>
-        <Skeleton width="70%" height="calc(100vh )"/>
+        <Skeleton width="70%" height="calc(100vh)"/>
     </Stack>
   )
 }
