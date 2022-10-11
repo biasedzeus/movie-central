@@ -4,19 +4,27 @@ import { MdMovieCreation } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const Header = () => {
- 
   return (
     <Stack
-      sx={{ padding: "1rem", backgroundColor: "#303030" }}
+      sx={{
+        padding: "1rem",
+        backgroundColor: "#404040",
+        width: "100%",
+      }}
       flexDirection="row"
-      alignItems="center"
+      alignItems=""
+      justifyContent="flex-start"
       gap="1rem"
     >
       <Link to="/">
         <MdMovieCreation size={"2rem"} color="white" />
       </Link>
       <Link to="/">
-        <Typography color="white" fontFamily="Lobster">The Movie Central</Typography>
+        <Typography sx={{"&:hover":{
+          filter:'drop-shadow(0 0 1rem white)'
+        }}} color="white" fontSize="1.4rem" fontWeight={"900"} fontFamily="Poppins">
+         Movie Central
+        </Typography>
       </Link>
     </Stack>
   );
