@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Card, CardMedia, Skeleton } from "@mui/material";
-export default function MovieCard({ movie }) {
-  const [isLoading, setIsLoading] = useState(false);
-
+export default function MovieCard({ movie,isLoading }) {
   return (
     <>
       {isLoading ? (
@@ -34,7 +32,7 @@ export default function MovieCard({ movie }) {
           }}
         >
           <Link
-            to={`/movie/${movie.id}`}
+            to={`/movie/${movie?.id}`}
             style={{
               textDecoration: "none",
             }}
@@ -45,7 +43,7 @@ export default function MovieCard({ movie }) {
               src={`https://image.tmdb.org/t/p/original${
                 movie ? movie.poster_path : ""
               }`}
-              alt="green iguana"
+              alt={movie? movie.title : ""}
             />
           </Link>
         </Card>
